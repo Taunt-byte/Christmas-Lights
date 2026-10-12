@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulador interativo de luzes de Natal com animações personalizáveis.">
+
+    <title>Christmas Lights</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <div>
+                <span class="eyebrow">🎄 PROJETO FRONT-END</span>
+                <h1>Christmas <span>Lights</span></h1>
+                <p>Simule um cordão de luzes natalinas.</p>
+            </div>
+
+            <button id="themeButton" class="theme-button">
+                ☀️ Tema claro
+            </button>
+        </header>
+
+        <div class="workspace">
+            <section class="panel controls">
+                <h2>⚙️ Controles</h2>
+
+                <div class="control-group">
+                    <label>Cor das lâmpadas</label>
+
+                    <div class="colors">
+                        <button class="color-option selected"
+                            data-color="#ff304f"
+                            style="--swatch: #ff304f"
+                            aria-label="Vermelho"></button>
+
+                        <button class="color-option"
+                            data-color="#00e676"
+                            style="--swatch: #00e676"
+                            aria-label="Verde"></button>
+
+                        <button class="color-option"
+                            data-color="#2979ff"
+                            style="--swatch: #2979ff"
+                            aria-label="Azul"></button>
+
+                        <button class="color-option"
+                            data-color="#ffd54f"
+                            style="--swatch: #ffd54f"
+                            aria-label="Amarelo"></button>
+
+                        <button class="color-option"
+                            data-color="#b388ff"
+                            style="--swatch: #b388ff"
+                            aria-label="Roxo"></button>
+
+                        <button class="color-option"
+                            data-color="#18eaff"
+                            style="--swatch: #18eaff"
+                            aria-label="Ciano"></button>
+
+                        <button class="color-option rainbow"
+                            data-color="rainbow"
+                            aria-label="Todas as cores">🌈</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="lightCount">
+                        Quantidade de lâmpadas
+                        <output id="countValue">20</output>
+                    </label>
+
+                    <input type="range" id="lightCount"
+                        min="5" max="40" value="20">
+                </div>
+
+                <div class="control-group">
+                    <label for="speed">
+                        Velocidade da animação
+                        <output id="speedValue">1.0 s</output>
+                    </label>
+
+                    <input type="range" id="speed"
+                        min="0.2" max="3" step="0.1" value="1">
+                </div>
+
+                <div class="control-group">
+                    <label>Modo de iluminação</label>
+
+                    <div class="mode-buttons">
+                        <button class="mode-button active"
+                            data-mode="normal">Normal</button>
+
+                        <button class="mode-button"
+                            data-mode="twinkle">Piscar</button>
+
+                        <button class="mode-button"
+                            data-mode="fade">Respirar</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="wireStyle">Estilo do fio</label>
+
+                    <select id="wireStyle">
+                        <option value="wave">Ondulado</option>
+                        <option value="straight">Reto</option>
+                        <option value="zigzag">Zigue-zague</option>
+                    </select>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="toggleButton" class="primary-button">
+                        ⏸ Pausar luzes
+                    </button>
+
+                    <button id="resetButton" class="secondary-button">
+                        ↻ Restaurar
+                    </button>
+                </div>
+            </section>
+
+            <div class="right-column">
+                <section class="panel preview-panel">
+                    <div class="section-heading">
+                        <div>
+                            <h2>✨ Pré-visualização</h2>
+                            <p>Veja as luzes em funcionamento.</p>
+                        </div>
+
+                        <span id="status" class="status">Ligadas</span>
+                    </div>
+
+                    <div class="scene" id="scene">
+                        <div class="stars" aria-hidden="true">✦　·　✧　·　✦　·　✧</div>
+
+                        <div id="lightString" class="light-string wave"
+                            aria-label="Cordão de luzes de Natal"></div>
+                    </div>
+                </section>
+
+                <section class="panel code-panel">
+                    <div class="section-heading">
+                        <h2> &lt;/&gt; CSS gerado</h2>
+                        <button id="copyButton">Copiar CSS</button>
+                    </div>
+
+                    <pre><code id="cssCode"></code></pre>
+
+                    <p id="copyMessage" aria-live="polite"></p>
+                </section>
+            </div>
+        </div>
+
+        <section class="features">
+            <article class="panel feature">
+                <span>🎨</span>
+                <h3>Personalize</h3>
+                <p>Escolha as cores e a quantidade de lâmpadas.</p>
+            </article>
+
+            <article class="panel feature">
+                <span>⚡</span>
+                <h3>Tempo real</h3>
+                <p>Observe as animações enquanto ajusta os controles.</p>
+            </article>
+
+            <article class="panel feature">
+                <span>💻</span>
+                <h3>CSS gerado</h3>
+                <p>Copie o código de animação para estudar e reutilizar.</p>
+            </article>
+
+            <article class="panel feature">
+                <span>🎄</span>
+                <h3>Espírito natalino</h3>
+                <p>Um projeto criativo para praticar desenvolvimento web.</p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Christmas Lights — desenvolvido com HTML, CSS e JavaScript.</p>
+        </footer>
+    </main>
+</body>
+</html>
