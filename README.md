@@ -18,9 +18,7 @@ A simple and interactive Christmas Lights simulator built to practice web develo
 
 ## 📸 Preview
 
-![Christmas Lights Preview](./assets/preview.png)
-
-> Replace the image path above with a screenshot of your project.
+![Christmas Lights Preview](assets/preview.png)
 
 ## 🚀 Getting Started
 
